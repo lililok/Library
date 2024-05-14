@@ -14,3 +14,7 @@ html {
     gap: 20px;
 }
 
+#dialog-input {
+  display: flex;
+  flex-direction: column;
+}

@@ -6,6 +6,11 @@ const dialog = document.querySelector("dialog");
 
 const table = document.querySelector("tbody");
 
+const title = document.getElementById('title')
+const author = document.getElementById('author')
+const pages = document.getElementById('pages')
+const status = document.getElementById('status')
+
 function Book(title, author, pages, status) {
     this.title = title;
     this.author = author;

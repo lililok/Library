@@ -13,7 +13,18 @@
     <dialog>
         <p>Add information</p>
         <form method="dialog">
+            <div id="dialog-input">
+                <label for="title">Title</label>
+            <input type="text" id="title" required>
+            <label for="author">Author</label>
+            <input type="text" id="author" required>
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" required>
+            <label for="status">Read?</label>
+            <input type="checkbox" id="status">
           <button id="close-button">OK</button>
+            </div>
+            
         </form>
       </dialog>
     <div class="table">
