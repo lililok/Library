@@ -3,13 +3,7 @@ const myLibrary = [];
 const openButton = document.getElementById('add-book')
 const closeButton = document.getElementById('close-button')
 const dialog = document.querySelector("dialog");
-
-const table = document.querySelector("tbody");
-
-const title = document.getElementById('title')
-const author = document.getElementById('author')
-const pages = document.getElementById('pages')
-const status = document.getElementById('status')
+const table = document.querySelector("table tbody");
 
 function Book(title, author, pages, status) {
     this.title = title;
@@ -18,10 +12,15 @@ function Book(title, author, pages, status) {
     this.status = status;
 }
 
-function addBookToLibrary() {
-  myLibrary.forEach(book => {
-    console.log(book.title);
-});
+function addBookToLibrary(book) {
+  const row = document.createElement('tr');
+  row.innerHTML = `
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.pages}</td>
+      <td>${book.status}</td>
+  `;
+  table.appendChild(row);
 }
 
 openButton.addEventListener("click", () => {
@@ -30,4 +29,21 @@ openButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
   dialog.close();
+});
+
+dialog.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const title = document.getElementById('title-input').value;
+  const author = document.getElementById('author-input').value;
+  const pages = document.getElementById('pages-input').value;
+  const status = document.getElementById('status-input').value;
+  const newBook = new Book(title, author, pages, status);
+  myLibrary.push(newBook);
+  addBookToLibrary(newBook);
+  
+  dialog.close();
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+  status.value = ''; 
 });

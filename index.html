@@ -14,15 +14,12 @@
         <p>Add information</p>
         <form method="dialog">
             <div id="dialog-input">
-                <label for="title">Title</label>
-            <input type="text" id="title" required>
-            <label for="author">Author</label>
-            <input type="text" id="author" required>
-            <label for="pages">Pages</label>
-            <input type="number" id="pages" required>
-            <label for="status">Read?</label>
-            <input type="checkbox" id="status">
-          <button id="close-button">OK</button>
+            <input type="text" id="title-input" required placeholder="Title">
+            <input type="text" id="author-input" required placeholder="Author">
+            <input type="number" id="pages-input" required placeholder="Pages">
+            <div><label for="status">Read:</label>
+                <input type="checkbox" id="status-input"></div>
+            <input type="submit" id="close-button"></button>
             </div>
             
         </form>
@@ -35,12 +32,12 @@
                 <th>Pages</th>
                 <th>Status</th>
             </tr></thead>
-            <tbody>
+            <tbody id="tbody">
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="title-data">a</td>
+                    <td id="author-data">b</td>
+                    <td id="pages-data">3</td>
+                    <td id="status-data">yes</td>
                 </tr>
             </tbody>
         </table>
