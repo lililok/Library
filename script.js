@@ -36,14 +36,18 @@ dialog.addEventListener('submit', (e) => {
   const title = document.getElementById('title-input').value;
   const author = document.getElementById('author-input').value;
   const pages = document.getElementById('pages-input').value;
-  const status = document.getElementById('status-input').value;
+  const status = document.getElementById('status-input').checked;
   const newBook = new Book(title, author, pages, status);
   myLibrary.push(newBook);
   addBookToLibrary(newBook);
-  
-  dialog.close();
   title.value = '';
   author.value = '';
   pages.value = '';
   status.value = ''; 
+  dialog.close();
 });
+
+function readStatus() {
+  
+}
+
