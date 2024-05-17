@@ -3,6 +3,7 @@ html {
   height: 100%;
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 #dialog-input {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .header {
@@ -41,6 +42,63 @@ body {
   font-size: 2em;
 }
 
-table, th, td, tr {
-  border: 1px solid black;
+td, th {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #212425;
+}
+
+th {
+  background-color: #0f1111;
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+}
+
+button {
+  border: 0;
+  color: aliceblue;
+}
+
+#add-book {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #212425;
+  color: aliceblue;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: large;
+  border: 3px dashed #090a0a;
+}
+
+.delete-button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #212425;
+}
+
+dialog {
+  background-color: #151718;
+  color: aliceblue;
+  border: 0;
+  border-radius: 5px;
+  
+}
+
+input {
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+}
+
+#close-button {
+  background-color: #151718;
+  padding: 10px;
+  position: relative;
+  left: 110px;
+  font-weight: bold;
 }
