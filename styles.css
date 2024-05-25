@@ -71,6 +71,9 @@ button {
   height: 50px;
   width: 50px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: large;
   border: 3px dashed #090a0a;
 }
